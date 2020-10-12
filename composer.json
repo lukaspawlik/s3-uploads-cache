@@ -1,0 +1,19 @@
+{
+    "name": "lukaspawlik/s3-uploads-cache",
+    "description": "Object cache support for S3 Uploads Plugin",
+    "type": "wordpress-plugin",
+    "keywords": [
+        "wordpress"
+    ],
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Lukas Pawlik",
+            "email": "lukasz.pawlik@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "classmap": ["src/"]
+    }
+}
