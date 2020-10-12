@@ -6,4 +6,4 @@ In many cases, [S3 Uploads](https://github.com/humanmade/S3-Uploads) plugin is u
 
 AWS S3 StreamWrapper class offers caching support by passing to it a class that implements `\Aws\CachingInterface`. With this support this plugin leverages WordPress object cache to store S3 objects metadata and technically it reduces AWS S3 API interaction to minimum.
 
-This plugin was tested up to: 2.0.1 of [S3 Uploads](https://github.com/humanmade/S3-Uploads) 
+This plugin was tested up to: 3.0.0-beta of [S3 Uploads](https://github.com/humanmade/S3-Uploads) 
