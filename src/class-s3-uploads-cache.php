@@ -22,9 +22,8 @@ class S3_Uploads_Cache {
 		 * Below code comes directly from original S3 Uploads plugin as we need to re-register stream wrapper.
 		 */
 		StreamWrapper::register( $instance->s3(), 's3', $cache );
-		$cache_control = apply_filters( 's3_uploads_cache_control', 'max-age=10368000,public' );
-		stream_context_set_option( stream_context_get_default(), 's3', 'ACL', 'public-read' );
-		stream_context_set_option( stream_context_get_default(), 's3', 'CacheControl', $cache_control );
+		$acl = defined( 'S3_UPLOADS_OBJECT_ACL' ) ? S3_UPLOADS_OBJECT_ACL : 'public-read';
+		stream_context_set_option( stream_context_get_default(), 's3', 'ACL', $acl );
 		stream_context_set_option( stream_context_get_default(), 's3', 'seekable', true );
 	}
 }
